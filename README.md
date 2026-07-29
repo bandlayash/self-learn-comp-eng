@@ -1,7 +1,7 @@
 # Self-Taught Computer Engineering Degree — Free Course Plan
 
 > A self-study computer-engineering curriculum assembled entirely from free, link-verified online course material.
-> The curation lens is the **hardware** side of CE, aimed at **GPU / laptop performance engineering** as an end goal.
+> The curation lens is the **hardware** side of CE, aimed at **GPU Performance Engineering** as an end goal.
 >
 > Compiled 2026-06-03 · links re-verified 2026-07-29. Every link was fetched and checked for existence + legality.
 > Status flags: ✅ excellent free coverage · ⚠️ a paid/gated/dead caveat to know.
