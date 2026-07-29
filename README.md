@@ -82,8 +82,8 @@ This plan covers the CE-only column and the math/physics that supports it. It do
 A CE degree differs from a CS degree mainly in: **circuits & electronics, signals/systems, digital design, deep computer
 architecture, VLSI/devices, and embedded systems**.
 
-**Key insight:** the canonical CE degree teaches what hardware *is* far better than how to *measure* it, or how a laptop's
-power and thermal envelope constrains it. The three things most relevant to GPU and notebook performance work —
+**Key insight:** the canonical CE degree teaches what hardware *is* far better than how to *measure* it, or how a power
+and thermal envelope constrains it. The three things most relevant to real performance work —
 **profiling methodology, thermal RC modeling, DVFS/power budgeting** — aren't real courses anywhere, so they're broken out
 in [The Critical Gaps](#-the-critical-gaps--what-no-ce-course-teaches-but-the-job-demands).
 
@@ -102,7 +102,7 @@ in [The Critical Gaps](#-the-critical-gaps--what-no-ce-course-teaches-but-the-jo
 | **2. Hardware mental model (8–12 wk)** | Circuits, Digital logic, Arch gateway | Read-level circuits; digital logic plus a Nand2Tetris CPU build; caches/pipelining. |
 | **3. ⭐ Core perf gap-fill (10–14 wk)** | **Advanced microarchitecture, Memory systems** | **Highest ROI.** Quantitative methodology and memory/bandwidth reasoning. |
 | **4. 🎯 The bullseye (10–14 wk)** | **GPU/parallel arch + CUDA** | UIUC ECE408 / Stanford CS149 on real hardware with Nsight. |
-| **5. Notebook depth (6–10 wk)** | Semiconductor devices, VLSI, Embedded | Take only power/thermal/leakage/V-f intuition plus the missing thermal/DVFS topics. |
+| **5. Power & thermal depth (6–10 wk)** | Semiconductor devices, VLSI, Embedded | Take only power/thermal/leakage/V-f intuition plus the missing thermal/DVFS topics. |
 | **6. As-needed** | Signals & systems | Conceptual pass only (clocks/PLLs/jitter). |
 
 ---
@@ -204,7 +204,7 @@ courses worth doing properly, and they are good ones.*
 
 ---
 
-## Phase 5 — Notebook-platform depth (take only the power/thermal intuition)
+## Phase 5 — Power & thermal depth (take only the physical-limits intuition)
 
 ### Semiconductor Devices & Device Physics — *medium*
 - [ ] **Lectures (video):** [GT ECE3030 (Shimeng Yu)](https://www.youtube.com/playlist?list=PLnQi8W6dRSW5yadACh5DpkymqrGYOFiay) · [NPTEL Solid State Devices (Karmalkar)](https://nptel.ac.in/courses/117106091)
@@ -244,10 +244,10 @@ performance engineering. Weave it in from Phase 3 onward rather than saving it f
 - [ ] **3. The Roofline model** → [Williams/Waterman/Patterson original paper (free PDF)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf)
 - [ ] **4. CUDA optimization workflow (APOD)** → [NVIDIA CUDA C++ Best Practices Guide](https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/)
 - [ ] **5. Current GPU microarch vocabulary** (courses use 2016-era generic material) → [Modal GPU Glossary](https://modal.com/gpu-glossary) + NVIDIA Ada/Hopper/Blackwell whitepapers
-- [ ] **6. Heat transfer & thermal RC modeling** ⭐ *the most notebook-specific gap* → [MIT OCW 2.051 Intro to Heat Transfer](https://ocw.mit.edu/courses/2-051-introduction-to-heat-transfer-fall-2015/) — junction-to-ambient R_th networks predict throttle behavior
+- [ ] **6. Heat transfer & thermal RC modeling** ⭐ *the widest gap between coursework and practice* → [MIT OCW 2.051 Intro to Heat Transfer](https://ocw.mit.edu/courses/2-051-introduction-to-heat-transfer-fall-2015/) — junction-to-ambient R_th networks predict throttle behavior on anything power-limited, from a phone SoC to a datacenter GPU
 - [ ] **7. Power modeling & DVFS in depth** → Mutlu's lectures + Chenming Hu's CV²f/leakage chapters
 - [ ] **8. GPU floating-point** (FP16/BF16/TF32, FMA, non-associativity) → [Goldberg "What Every CS Should Know About Floating-Point"](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html)
-- [ ] **9. Interconnect/transfer cost** (PCIe/NVLink, often dominates on hybrid-graphics laptops) → H&P free Appendix F + CUDA Best Practices host-device section
+- [ ] **9. Interconnect/transfer cost** (PCIe/NVLink — host-device transfer often dominates the kernel it feeds) → H&P free Appendix F + CUDA Best Practices host-device section
 - [ ] **10. OS scheduler/governor/driver noise** (where bad benchmarks come from) → [Brendan Gregg Linux perf](https://www.brendangregg.com/linuxperf.html)
 
 ---
