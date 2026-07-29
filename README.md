@@ -292,3 +292,14 @@ Corrections welcome, especially:
 
 Open an issue or a PR. Please keep the ✅/⚠️ status flags accurate, and verify that any added link is both live and legal
 to access for free.
+
+## License
+
+The curriculum itself — the sequencing, the annotations, and the prose — is released under
+[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+Copy it, fork it, remix it, or build a course on it; just credit the source.
+
+**This does not extend to the linked material.** Every course, lecture recording, textbook, and problem set referenced
+here remains under its own license and terms — MIT OCW's CC BY-NC-SA, individual publisher terms, university course
+policies, and so on. Everything was checked to be free and legal to *access* at the time of linking, which is a narrower
+claim than being free to redistribute. Check the source before republishing anything from it.
